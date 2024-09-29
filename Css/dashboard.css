@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #0C111C; */
+    color: white;
+
+}
+
+.container {
+    display: flex;
+}
+/* Sidebar (Navbar) */
+.navbar {
+    width: 250px; /* Adjusted to be larger for visibility */
+    background-color: #343a40;
+    padding: 20px;
+    color: white;
+    position: fixed; /* Ensures the sidebar stays in place */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* This ensures the content doesn't hide behind the sidebar */
+    flex: 1;
+    /* background-color: #0C111C; */
+
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+    color: black;
+    padding: 24px;
+
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+.user-profile {
+    position: relative; /* This allows the popup to be positioned relative to the user profile icon */
+    display: inline-block;
+}
+
+#user-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#user-icon:hover {
+    color: #555; /* Change to any color you prefer on hover */
+}
+
+
+.popup-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 40px; /* Adjust this to control the position of the popup */
+    right: 0;
+    background-color: #111725;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000; /* Ensure the popup appears above other elements */
+    padding: 10px;
+    width: 180px;
+}
+
+.popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-menu ul li {
+    padding: 10px 0;
+    text-align: left;
+}
+.popup-menu ul li:hover {
+    background-color: #172448;
+    padding: -10px;
+
+}
+.popup-menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #EEEEF0;
+}
+
+.popup-menu ul li a:hover {
+    color: #ffffff;
+}
+
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: #111725;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    box-shadow: 2px 4px 8px rgba(255, 254, 254, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card-link {
+    text-decoration: none; /* Remove default link underline */
+    color: inherit; /* Inherit color from the card */
+}
+
+.card-link .card {
+    cursor: pointer; /* Show a pointer cursor when hovering over the card */
+}
+
+/* Hover effect for the entire card */
+.card:hover {
+    background-color: #172448; /* Slightly darker on hover */
+}
+.create-icon {
+    font-size: 100px; /* You can adjust this size as needed */
+}
+
+
+
+/* view profile  */
+

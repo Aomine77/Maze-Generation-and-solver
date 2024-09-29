@@ -1,0 +1,133 @@
+:root {
+    --background-1: #0A0C14;   /* Very dark blue */
+    --background-2: #0B1621;   /* Dark blue */
+    --background-3: #102537;   /* Mid-dark blue */
+    --interactive-4: #1A3D58;  /* Dark interactive component */
+    --interactive-5: #28547B;  /* Mid-dark interactive component */
+    --border-8: #3B6692;       /* Dark border */
+    --solid-9: #4468B4;        /* Solid color (dark blue) */
+    --solid-10: #3C5A9C;       /* Solid color (mid-blue) */
+    --text-11: #6A82B5;        /* Light blue for accessible text */
+    --text-12: #B8C7E2;        /* Very light blue */
+}
+/* *{
+    border: 1px solid red;
+    box-sizing: border-box;
+} */
+
+body {
+    background-color: var(--background-1);
+    color: var(--text-12);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    
+    
+}
+
+.controls-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-keys {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left down right";
+    grid-gap: 10px;
+    position: relative;
+}
+
+.arrow-key {
+    width: 150px;
+    height: 150px;
+    background-color: var(--interactive-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: var(--text-12); /* Ensure good contrast */
+}
+
+#up { grid-area: up; }
+#left { grid-area: left; }
+#down { grid-area: down; }
+#right { grid-area: right; }
+
+.label {
+    position: absolute;
+    font-size: 32px;
+    color: var(--text-11);
+}
+
+.up{
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    top: 70%;
+    left: -80px;
+    transform: translateY(-50%);
+}
+
+.down{
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    top: 70%;
+    right: -80px;
+    transform: translateY(-50%);
+}
+.fire {
+    position: absolute;
+    top: 10px;
+    right: -70px;
+}
+
+.boost-blast {
+    position: absolute;
+    bottom: 10px;
+    right: -90px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: #131A24;
+    padding: 10px;
+    margin: 0;
+}
+.dashboard {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1B2A41;
+    color: white;
+}

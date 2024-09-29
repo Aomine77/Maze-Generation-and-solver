@@ -1,0 +1,94 @@
+
+body {
+  background-color: #0c111c;
+  margin: 0px;
+  font-family: Arial, sans-serif;
+  color: #ccc;
+}
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: auto 1fr; /* Adjust for header and content */
+  height: 100vh;
+}
+.header{
+  display: flex;
+  align-items: center;
+  background-color: #131A24;
+}
+
+.sketch-holder {
+  padding: 20px;
+}
+#sketch-holder {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button {
+  margin-left: 24px ;
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #1b2a41; 
+  transition: all 0.2s ease;
+  height: 40px;
+  font-size: 20px;
+}
+
+.button:hover {
+  background-color: #243a5e;
+}
+
+.back {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #1b2a41;
+  color: white;
+}
+.back:hover {
+  background-color: #243a5e;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #131A24;
+}
+.nav label {
+  font-size: 16px; 
+  color: #ffffff; 
+  margin-left: 10px ;
+}
+
+.nav input[type="number"] {
+  width: 60px;
+  height: 28px;
+  padding: 8px; 
+  margin-left: 24px ;
+  border: 1px solid #4C566A;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  color: #000000;
+  font-size: 16px;
+}
+
+.nav input[type="number"]:focus {
+  border-color: #88C0D0; 
+  outline: none;
+}
+

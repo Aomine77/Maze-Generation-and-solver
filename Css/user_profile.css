@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+aside {
+    width: 240px;
+    background-color: #111725;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    position: fixed;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+    color: black;
+    padding: 24px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+/* Main content */
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 240px;
+    width: calc(100% - 240px); /* Adjust width based on sidebar */
+    
+
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Increased for better spacing */
+    color: #333;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 20px; /* Consistent bottom margin */
+}
+
+/* User profile card */
+
+.user_details {
+    display: flex;
+    justify-content: center; /* Horizontally center the card */
+    align-items: center; /* Vertically center the card */
+   
+}
+
+.user_details .card {
+    background-color: #111725;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    margin-bottom: 20px; /* Equal margin at the bottom of the card */
+    margin-top: 24px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.user-profile {
+    position: relative; /* This allows the popup to be positioned relative to the user profile icon */
+    display: inline-block;
+}
+
+#user-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#user-icon:hover {
+    color: #555; /* Change to any color you prefer on hover */
+}
+
+.popup-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 40px; /* Adjust this to control the position of the popup */
+    right: 0;
+    background-color: #111725;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000; /* Ensure the popup appears above other elements */
+    padding: 10px;
+    width: 180px;
+}
+
+.popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-menu ul li {
+    padding: 10px 0;
+    text-align: left;
+}
+
+.popup-menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #EEEEF0;
+}
+
+.popup-menu ul li a:hover {
+    color: #93B4FF;
+}
+
+
+.form-label{
+    padding: 10px;
+}
+
+.card input[type="text"],
+.card input[type="password"] {
+    background-color: #eee;
+    border: none;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: calc(100% ); /* Adjust width for padding */
+    outline: none;
+    margin-bottom: 20px; /* Equal margin for input fields */
+    margin-top: 12px;
+}
+
+.update {
+    padding: 10px 20px;
+    background-color: #375098;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Equal margin for buttons */
+    transition: background-color 0.3s;
+}
+
+.update:hover {
+    background-color: #243974;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        position: relative;
+        height: auto; /* Adjust height for small screens */
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+.inactive-input {
+    background-color: #f0f0f0; /* Light gray to indicate inactivity */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Same padding as active inputs */
+    font-size: 13px; /* Same font size */
+    border-radius: 8px; /* Same border radius */
+    width: calc(100% - 30px); /* Same width calculation */
+    outline: none; /* No outline */
+    color: #666; /* Dimmed text color */
+    cursor: not-allowed; /* Change cursor to indicate inactivity */
+}
+
+
+
+
+/* Delete User  */
+
+.delete {
+    background-color: #ff4c4c;  /* Red color for delete */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.delete:hover {
+    background-color: #d63434;  /* Darker red on hover */
+}
+
+
+/* Popup container - hidden by default */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+/* Popup content box */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    max-width: 90%; /* Responsive */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Popup buttons */
+.popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.confirm-btn, .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #ff4c4c;
+    color: #fff;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.confirm-btn:hover {
+    background-color: #d63434;
+}
+
+.cancel-btn:hover {
+    background-color: #999;
+}

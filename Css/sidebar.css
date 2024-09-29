@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.side-container {
+    display: flex;
+}
+.sidebar {
+    width: 260px;
+    background-color: #111725;
+    padding: 0.5rem;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+.logo{
+    width: 200px;
+    height: 80px;
+}
+
+#title{
+    color: #f4f4f4;
+}
+.sidebar.collapsed .lists li a {
+    justify-content: center;
+    text-align: center;
+}
+.sidebar.collapsed .lists li a span {
+    display: none;
+}
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar nav ul li {
+    margin-bottom: 40px; 
+    transition: background-color 0.3s;
+}
+.sidebar nav ul li:hover {
+    
+    background-color: #172448; 
+}
+.sidebar-collapsed {
+width: 0;
+transition: width 0.3s ease;
+}
+/* .side-nav{
+    margin-top: 40px;
+} */
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem;
+}
+.sidebar nav ul li a:hover {
+    background-color: transparent;
+}
+.sidebar nav ul li a i {
+    margin-right: 10px; 
+}
+/* .side-lists {
+    margin-top: 40px;
+} */
+.side-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 16px;
+}

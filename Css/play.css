@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #0C111C;
+}
+
+.Levels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131A24;
+    padding: 16px;
+}
+
+.Levels .dashboard {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1B2A41;
+    color: white;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.Levels select, .Levels .play {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1B2A41;
+    color: white;
+}
+
+.Levels select:hover, .Levels .play:hover, .Levels .dashboard:hover {
+    background-color: #243A5E;
+}
+
+#game-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+canvas {
+    border: 1px solid #1B2A41;
+}
+
+
+
+/* controls */
+/* The Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* overflow: auto; Enable scroll if needed */
+    color: #FFFFFF;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content2 {
+    background-color: #0C111C;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #f3f3f3;
+    width: 30%; /* Could be more or less, depending on screen size */
+    height: 55%;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the close button (cross) */
+.modal2 .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal2 .close:hover,
+.modal2 .close:focus {
+    color: rgb(253, 1, 1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* The Close Button */
+.close {
+    color: #f50000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(44, 5, 5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    color: #EEEEF0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    color: #EEEEF0;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+ul li img, ul li i {
+    color: #EEEEF0;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+ h2{
+    color: #EEEEF0;
+    text-align: center;
+    font-size: 40px;
+    
+ }
+ .timer {
+    margin-right: 20px;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.timer i {
+    font-size: 1.2rem;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Modal Buttons */
+.modal-button {
+    background-color: #172448;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    background-color: #243974;
+}
+
+
+
+#difficultyPopup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content2 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.levelButton2 {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #172448;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.levelButton2:hover {
+    background-color: #243974;
+}
+
+
+
+/* controls  */
+.controls-grid {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-keys {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left down right";
+    grid-gap: 10px;
+    position: relative;
+}
+
+.arrow-key {
+    width: 80px;
+    height: 80px;
+    background-color: #2D4484;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 254, 254, 0.2);
+    color: var(--text-12); /* Ensure good contrast */
+}
+
+#up { grid-area: up; }
+#left { grid-area: left; }
+#down { grid-area: down; }
+#right { grid-area: right; }
+
+.label {
+    position: absolute;
+    font-size: 32px;
+    color: var(--text-11);
+}
+
+.up{
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    top: 70%;
+    left: -80px;
+    transform: translateY(-50%);
+}
+
+.down{
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    top: 70%;
+    right: -80px;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,146 @@
+*{
+    font-family: Arial, sans-serif;
+/* border:  1px solid red; */
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+#toggle-sidebar{
+    margin-left: 24px;
+    cursor: pointer;
+    font-size: 24px;
+
+}
+aside {
+    width: 240px;
+    background-color: #111725;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    position: fixed;
+}
+/* Sidebar collapsed state */
+.sidebar-collapsed {
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.main-content-collapsed {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 240px;
+    width: 100%;
+}
+
+.user-profile {
+    position: relative; /* This allows the popup to be positioned relative to the user profile icon */
+    display: inline-block;
+}
+
+#user-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#user-icon:hover {
+    color: #555; /* Change to any color you prefer on hover */
+}
+
+.popup-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 40px; /* Adjust this to control the position of the popup */
+    right: 0;
+    background-color: #111725;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000; /* Ensure the popup appears above other elements */
+    padding: 10px;
+    width: 180px;
+}
+
+.popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-menu ul li {
+    padding: 10px 0;
+    text-align: left;
+}
+
+.popup-menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #EEEEF0;
+}
+
+.popup-menu ul li a:hover {
+    color: #93B4FF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+    color: black;
+    padding: 24px;
+
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+.leaderboard {
+    margin: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    max-height: 800px; 
+    overflow-y: auto; 
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #111725;
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card table th, .card table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Responsive design: Stack cards vertically on small screens */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* On small devices, cards take full width */
+    }
+}
